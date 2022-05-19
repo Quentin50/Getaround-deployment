@@ -4,7 +4,7 @@
 ## Presentation video
 TODO
 ## Dashboard on heroku
-https://getaround-dashboard-qg2022.herokuapp.com/ (I won't support it in the future so it may not be workin anymore after December 2022)
+https://getaround-dashboard-qg2022.herokuapp.com/ (I won't support it in the future so it may not be working anymore after December 2022)
 
 
 ### Objective
