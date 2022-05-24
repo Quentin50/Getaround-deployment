@@ -12,16 +12,15 @@ The technical goal of this project is to deploy multiple tools related to data s
 - a web MLFlow server to exchange with peer data scientists
 - an web API exposing a machine learning prediction route
 
-## Dashboard
+## Deliverables
+
 [GetAround Dashboard](https://getaround-dashboard-qg2022.herokuapp.com/)
 
-## MLFlow
 [My MLFlow server](https://getaround-mlflow.herokuapp.com/)
 
-## API
 [API docs](https://getaround-api-qg2022.herokuapp.com/docs)
 
-I am using the free Heroku version so allow up to one minute to get the first response if the API is sleeping. Furthermore, I won't support it in the future so it may not be working anymore after December 2022.
+I am using the free Heroku version so allow up to one minute to get the first response if the app is sleeping. Furthermore, I won't support it in the future so it may not be working anymore after December 2022 due to Heroku or Python libraries updates.
 
 ## Dataset
 * [Delay Analysis](https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_delay_analysis.xlsx) 👈 Data Analysis 
