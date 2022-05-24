@@ -9,9 +9,9 @@ GetAround is a company that allows car owners to rent their cars to customers. S
 
 The technical goal of this project is to deploy multiple tools related to data science:
 - a web dashbord acessible anywhere
-- an web API exposing a machine learning prediction route
 - a web MLFlow server to exchange with peer data scientists
-- 
+- an web API exposing a machine learning prediction route
+
 ## Dashboard
 [GetAround Dashboard](https://getaround-dashboard-qg2022.herokuapp.com/)
 
