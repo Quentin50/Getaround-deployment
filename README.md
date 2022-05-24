@@ -15,6 +15,12 @@ The technical goal of this project is to deploy multiple tools related to data s
 ## Dashboard
 [GetAround Dashboard](https://getaround-dashboard-qg2022.herokuapp.com/)
 
+## MLFlow
+[My MLFlow server](https://getaround-mlflow.herokuapp.com/)
+
+## API
+[Predict API](https://getaround-api-qg2022.herokuapp.com/)
+
 I am using the free Heroku version so allow up to one minute to get the first response if the API is sleeping. Furthermore, I won't support it in the future so it may not be working anymore after December 2022.
 
 ## Dataset
