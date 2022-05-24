@@ -25,12 +25,12 @@ Check out documentation for more information on each endpoint.
 
 tags_metadata = [
     {
-        "name": "Data",
+        "name": "Preview",
         "description": "Functions related directly to the data",
     },
 
     {
-        "name": "Machine Learning",
+        "name": "Machine-Learning",
         "description": "Functions related to Machine Learning"
     },
 ]
@@ -91,7 +91,7 @@ async def predict(predictionFeatures: PredictionFeatures):
     df = pd.DataFrame(dict(predictionFeatures), index=[0])
 
     # Log model from mlflow
-    logged_model = 'runs:/96559a23cafb417c99d8047ec6a9f622/car_rental_price'
+    logged_model = 'runs:/d72a57cad595407f8d4688a3dd8c897e/car_rental_price'
 
     # Load model as a PyFuncModel.
     loaded_model = mlflow.pyfunc.load_model(logged_model)
