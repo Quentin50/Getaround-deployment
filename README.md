@@ -4,7 +4,8 @@
 ## Presentation video
 TODO
 ## Dashboard on heroku
-[GetAround Dashboard](https://getaround-dashboard-qg2022.herokuapp.com/) (I won't support it in the future so it may not be working anymore after December 2022)
+I am using the free Heroku version so allow up to one minute to get the first response if the API is sleeping. Furthermore, I won't support it in the future so it may not be working anymore after December 2022.
+[GetAround Dashboard](https://getaround-dashboard-qg2022.herokuapp.com/)
 
 
 ### Objective
