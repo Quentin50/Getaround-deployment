@@ -19,7 +19,7 @@ The technical goal of this project is to deploy multiple tools related to data s
 [My MLFlow server](https://getaround-mlflow.herokuapp.com/)
 
 ## API
-[Predict API](https://getaround-api-qg2022.herokuapp.com/)
+[API docs](https://getaround-api-qg2022.herokuapp.com/docs)
 
 I am using the free Heroku version so allow up to one minute to get the first response if the API is sleeping. Furthermore, I won't support it in the future so it may not be working anymore after December 2022.
 
