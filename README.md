@@ -3,11 +3,6 @@
 ### Links
 ## Presentation video
 Recording... 
-## Dashboard
-[GetAround Dashboard](https://getaround-dashboard-qg2022.herokuapp.com/)
-
-I am using the free Heroku version so allow up to one minute to get the first response if the API is sleeping. Furthermore, I won't support it in the future so it may not be working anymore after December 2022.
-
 
 ### Objective
 GetAround is a company that allows car owners to rent their cars to customers. Sometimes a customer might be late to checkout and the next customer might have to wait to checkin. It leads to cancellations, have a negative impact on the company revenues and image. The goal of this project is to be able to anticipate late checkouts, and evaluate the impact of some measures on car owners revenues. 
@@ -16,6 +11,11 @@ The technical goal of this project is to deploy multiple tools related to data s
 - a web dashbord acessible anywhere
 - an web API exposing a machine learning prediction route
 - a web MLFlow server to exchange with peer data scientists
+- 
+## Dashboard
+[GetAround Dashboard](https://getaround-dashboard-qg2022.herokuapp.com/)
+
+I am using the free Heroku version so allow up to one minute to get the first response if the API is sleeping. Furthermore, I won't support it in the future so it may not be working anymore after December 2022.
 
 ## Dataset
 * [Delay Analysis](https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_delay_analysis.xlsx) 👈 Data Analysis 
