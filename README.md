@@ -22,8 +22,6 @@ I am using the free Heroku version so allow up to one minute to get the first re
 * [Pricing Optimization](https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_pricing_project.csv) 👈 Machine Learning: place it in api/data
 
 ## Prerequisites
-
-
 ### Dependencies
 - The source code is written in Python 3.
 - Docker is necessary to build and run localy the docker images
@@ -31,12 +29,13 @@ I am using the free Heroku version so allow up to one minute to get the first re
 
 ## Usage
 ### Dashboard
-Build the docker image with build.bat (easiy adaptable for linux if needed).
-Run the docker image localy with run.bat or upload it to heroku with heroku CLI.
-
-### API
+Build the docker image with build.bat and run the docker image localy with run.bat. Or upload image to heroku with heroku CLI.
 
 ### MLFlow
+Create a S3 bucket and a posgres database, then use secrets.bat file to store credentials as env var. Build the docker image with build.bat and run the docker image localy with run.bat. Or upload image to heroku with heroku CLI, you need to add the previous credentials on the website. Once your MLFlow server is set up, use train.py to train your ML algorithm.Use run_train.bat file to do so as credentials are also needed. 
+
+### API
+You must have a MLFlow server and its URI ready at this point. All previous credentials and the server URI must be available in env vars. Build the docker image with build.bat and run the docker image localy with run.bat. Or upload image to heroku with heroku CLI, you need to add the previous credentials on the website for the ML route to work. You can use run_test.bat to test, or access the doc to try it out.
 
 ## Team contributors
 Quentin Gottafray
