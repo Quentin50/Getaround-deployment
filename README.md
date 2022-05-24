@@ -2,7 +2,7 @@
 
 ### Links
 ## Presentation video
-TODO
+Recording... 
 ## Dashboard
 [GetAround Dashboard](https://getaround-dashboard-qg2022.herokuapp.com/)
 
