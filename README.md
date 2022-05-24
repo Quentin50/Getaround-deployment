@@ -1,4 +1,4 @@
-# Project with Jedha
+# Getaround project with Jedha
 
 ### Links
 ## Presentation video
