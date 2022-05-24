@@ -8,7 +8,7 @@ https://getaround-dashboard-qg2022.herokuapp.com/ (I won't support it in the fut
 
 
 ### Objective
-GetAround is a company that allows car owners to rent their cars to customers. Sometime a customer might be late to checkout and the next customer might have to wait to checkin. this could lead to cancellations, have a negative impact on the company revenues and image. The goal of this project is to be able to anticipate late checkouts, and evaluate the impact of some measures on car owners revenues. 
+GetAround is a company that allows car owners to rent their cars to customers. Sometime a customer might be late to checkout and the next customer might have to wait to checkin. It leads to cancellations, have a negative impact on the company revenues and image. The goal of this project is to be able to anticipate late checkouts, and evaluate the impact of some measures on car owners revenues. 
 
 The technical goal of this project is to deploy multiple tools related to data science:
 - a web dashbord acessible anywhere
