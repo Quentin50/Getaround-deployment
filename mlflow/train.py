@@ -60,6 +60,7 @@ if __name__ == "__main__":
     ] # Columns containing strings or booleans
     categorical_transformer = OneHotEncoder(drop='first', handle_unknown='error', sparse=False)
 
+    # numerical features preprocessor
     numerical_feature_mask = X_train.columns.isin(
         [
             "mileage",
@@ -68,6 +69,7 @@ if __name__ == "__main__":
     numerical_features = X_train.columns[numerical_feature_mask]
     numerical_transformer = StandardScaler()
 
+    # Creating final preprocessor
     feature_preprocessor = ColumnTransformer(
         transformers=[
             ("categorical_transformer", categorical_transformer, categorical_features),
@@ -75,10 +77,11 @@ if __name__ == "__main__":
         ]
     )
 
-    # Pipeline 
+    # Importing hyperparameters from console args
     n_estimators = int(args.n_estimators)
     min_samples_split=int(args.min_samples_split)
 
+    # Creating model from preprocessor and Random Forest Classifier
     model = Pipeline(steps=[
         ('features_preprocessing', feature_preprocessor),
         ("Regressor",RandomForestClassifier(n_estimators=n_estimators, min_samples_split=min_samples_split))

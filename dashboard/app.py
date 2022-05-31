@@ -13,9 +13,11 @@ st.set_page_config(
     layout="wide"
 )
 
+# Where to download data
 DATA_URL = ('https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_delay_analysis.xlsx')
 
 ### App
+# Everything will be printed lineraly on the dashboard
 st.title("GetAround Dashboard")
 
 st.markdown("""
@@ -24,9 +26,8 @@ st.markdown("""
 
 st.markdown("---")
 
-# Use `st.cache` when loading data is extremly useful
-# because it will cache your data so that your app 
-# won't have to reload it each time you refresh your app
+# Use `st.cache` to put data in cache
+# Data will not be reloaded each time the app is refreshed
 @st.cache
 def load_data(nrows=''):
     data = pd.DataFrame()
@@ -45,10 +46,12 @@ data_load_state = st.text('Loading data...')
 data = load_data()
 data_load_state.text("") # change text from "Loading data..." to "" once the the load_data function has run
 
+# Markdown explanations
 st.subheader("About the data")
 st.markdown(f"""
     The data is a sample of **{data["rental_id"].size}** rental records. Let's take a look at the proportion of late returns.
 """)
+# Graph showing the late checkouts proportions
 fig = px.histogram(
     data["delay_at_checkout_in_minutes"].apply(lambda x: "Late" if x > 0 else "In time or in advance").rename("Late checkouts"),
     x="Late checkouts"
@@ -58,6 +61,7 @@ st.plotly_chart(fig)
 st.markdown("""
     Focusing only on late returns, here is the repartition of delay at checkout.
 """)
+# Graph showing the time passed in minutes before a late checkout
 fig = px.histogram(
     data[
         (data["delay_at_checkout_in_minutes"] > 0) &
@@ -119,6 +123,7 @@ pb_in_data = data_chain["delayed_checkin"].value_counts()["Delayed"]
 st.markdown(f"""
     There are **{pb_in_data}** problematic cases of chained rentals. Let's visualise how much the checkins were delayed.
 """)
+## 3 Graphs showing delay at checkin (total, and segmented less and more than 90min)
 fig = px.histogram(
     data_chain[data_chain["delay_at_checkin"] > 0]["delay_at_checkin"].rename("Delay at checkin in minutes"),
     x="Delay at checkin in minutes")
@@ -138,7 +143,7 @@ st.markdown(f"""
     Note that the observed pics may come from the way the data was gathered, rather than a customer habits to be late of exactly multiples of 30min. Further investigations would be needed to conclude.
 """)
 
-### Threshold
+### Threshold: minimum time between two rentals
 st.subheader("Threshold testing")
 
 ## Reference

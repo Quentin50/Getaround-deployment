@@ -7,6 +7,7 @@ from typing import Literal, List
 from fastapi import FastAPI
 import json
 
+# description will apear in the doc
 description = """
 GetAround API helps you learn more about GetAround rentals.
 
@@ -23,6 +24,7 @@ GetAround is a company that allows car owners to rent their cars to customers. S
 Check out documentation for more information on each endpoint.
 """
 
+# tags to sort easily our routes
 tags_metadata = [
     {
         "name": "Preview",
@@ -35,6 +37,7 @@ tags_metadata = [
     },
 ]
 
+# initialise API object
 app = FastAPI(
     title="GetAround API",
     description=description,
@@ -71,6 +74,8 @@ async def random_car(rows: int=10):
     """
     print("/preview called")
     df = pd.read_csv("data/get_around_pricing_project.csv")
+
+    # Select only n rows
     sample = df.sample(rows)
     return sample.to_json()
 
@@ -87,7 +92,7 @@ async def predict(predictionFeatures: PredictionFeatures):
     All columns values are needed, as dictionnary or form data.
     """
     print("/predict called")
-    # Read data 
+    # Read data
     df = pd.DataFrame(dict(predictionFeatures), index=[0])
 
     # Log model from mlflow
@@ -101,5 +106,6 @@ async def predict(predictionFeatures: PredictionFeatures):
     response = {"prediction": prediction.tolist()[0]}
     return response
 
+# What to do when the script is runned as main script
 if __name__=="__main__":
     uvicorn.run(app, host="0.0.0.0", port=4000, debug=True, reload=True)
