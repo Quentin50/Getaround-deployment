@@ -1,5 +1,7 @@
 # Getaround project with Jedha
 
+Please be careful with secrets.bat file, never push your credentials to a repository. I use this file localy and the one in this repo is only a sample you can use.
+
 ## Presentation video
 [Presentation video on vidyard](https://share.vidyard.com/watch/U9YaiBRCXcdPKYRnz44RE8?)
 
