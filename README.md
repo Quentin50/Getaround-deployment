@@ -44,7 +44,7 @@ Create a S3 bucket and a posgres database, then use secrets.bat file to store cr
 You must have a MLFlow server and its URI ready at this point. All previous credentials and the server URI must be available in env vars. Build the docker image with build.bat and run the docker image localy with run.bat. Or upload image to heroku with heroku CLI, you need to add the previous credentials on the website for the ML route to work. You can use run_test.bat to test, or access the doc to try it out.
 
 ## Team contributors
-Quentin Gottafray
+Axelle Gottafray
 
 ## References
 
